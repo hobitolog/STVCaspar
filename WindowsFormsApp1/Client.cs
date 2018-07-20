@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
         }
         }
 
-        private void LoadData(String recvMessage)
+        private void LoadData()
         {
             if (myStream.CanRead)
             {
@@ -79,14 +79,14 @@ namespace WindowsFormsApp1
                     myCompleteMessage.Append(Encoding.UTF8.GetString(recvBuffer, 0, numberOfBytesRead));
                 } while (this.myStream.DataAvailable);
                 
-                recvMessage = myCompleteMessage.ToString(13,myCompleteMessage.Length-14);
+                this.recvMessage = myCompleteMessage.ToString(12,myCompleteMessage.Length-13);
             }
         }
 
         private void LoadFilesInfo()
         {
             SendString("CLS");
-            LoadData(this.recvMessage);
+            LoadData();
         }
         
         public List<string> GetFilesInfo()
@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             string tempString = "";
             foreach (Match match in Regex.Matches(this.recvMessage, "\"(\\w+)"))
             {
-                tempString = match.ToString(); 
+                tempString = match.Value;
                 fileNames.Add(tempString.Substring(1 , tempString.Length-1));
             }
             return fileNames;
