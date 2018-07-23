@@ -12,6 +12,20 @@ namespace WindowsFormsApp1
         private bool infoBar = false;
         private bool clock = false;
         private bool labels = false;
+        private int videoLayer = 0;
+        private bool loaded = false;
+
+        public bool Loaded
+        {
+            get => loaded;
+            set => loaded = value;
+        }
+
+        public int VideoLayer
+        {
+            get => videoLayer;
+            set => videoLayer = value;
+        }
 
         public string VideoName
         {

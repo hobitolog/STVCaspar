@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
             {
                 if (this.myStream != null && this.myStream.CanWrite)
                 {
-                    byte[] bytes = Encoding.UTF8.GetBytes(message + "\r\n");
+                    byte[] bytes = Encoding.UTF8.GetBytes(message + " \r\n");
                     myStream.Write(bytes, 0, bytes.Length);
                 }
             }
@@ -100,9 +100,24 @@ namespace WindowsFormsApp1
             return fileNames;
         }
 
-        public void LoadVideo(int ch, string video)
+        public void LoadVideo(int ch, int layer,string video)
         {
-            this.SendString("PLAY " + ch.ToString() + " " + video);
+            this.SendString("LOAD " + ch.ToString() + "-" + layer + " " + video);
+        }
+
+        public void PlayVideo(int ch, int layer)
+        {
+            this.SendString("PLAY " + ch + "-" + layer);
+        }
+
+        public void PauseVideo(int ch, int layer)
+        {
+            this.SendString("PAUSE " + ch + "-" + layer);
+        }
+
+        public void StopVideo(int ch, int layer)
+        {
+            this.SendString("STOP " + ch + "-" + layer);
         }
 
     }

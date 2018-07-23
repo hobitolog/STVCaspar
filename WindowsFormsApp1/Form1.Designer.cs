@@ -54,22 +54,22 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.boxVideoLayer8 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer7 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer6 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer5 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer4 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer3 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer2 = new System.Windows.Forms.NumericUpDown();
-            this.boxVideoLayer1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxVideo8 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo7 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo6 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo5 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo4 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo3 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxVideo1 = new System.Windows.Forms.ComboBox();
+            this.VL8 = new System.Windows.Forms.NumericUpDown();
+            this.VL7 = new System.Windows.Forms.NumericUpDown();
+            this.VL6 = new System.Windows.Forms.NumericUpDown();
+            this.VL5 = new System.Windows.Forms.NumericUpDown();
+            this.VL4 = new System.Windows.Forms.NumericUpDown();
+            this.VL3 = new System.Windows.Forms.NumericUpDown();
+            this.VL2 = new System.Windows.Forms.NumericUpDown();
+            this.VL1 = new System.Windows.Forms.NumericUpDown();
+            this.cbxV8 = new System.Windows.Forms.ComboBox();
+            this.cbxV7 = new System.Windows.Forms.ComboBox();
+            this.cbxV6 = new System.Windows.Forms.ComboBox();
+            this.cbxV5 = new System.Windows.Forms.ComboBox();
+            this.cbxV4 = new System.Windows.Forms.ComboBox();
+            this.cbxV3 = new System.Windows.Forms.ComboBox();
+            this.cbxV2 = new System.Windows.Forms.ComboBox();
+            this.cbxV1 = new System.Windows.Forms.ComboBox();
             this.cbV8 = new System.Windows.Forms.CheckBox();
             this.cbV7 = new System.Windows.Forms.CheckBox();
             this.cbV6 = new System.Windows.Forms.CheckBox();
@@ -138,6 +138,7 @@
             this.boxLabelHorizontalPos = new System.Windows.Forms.NumericUpDown();
             this.boxLabelVerticalPos = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonPause = new System.Windows.Forms.Button();
             labelBar = new System.Windows.Forms.Label();
             labelLogo = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -149,14 +150,14 @@
             label7 = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.tabVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL1)).BeginInit();
             this.tabBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boxBarHorizontalPos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxBarVerticalPos)).BeginInit();
@@ -296,7 +297,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(56, 366);
+            this.buttonStart.Location = new System.Drawing.Point(16, 366);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(96, 38);
             this.buttonStart.TabIndex = 10;
@@ -306,7 +307,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(221, 366);
+            this.buttonStop.Location = new System.Drawing.Point(276, 366);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(96, 38);
             this.buttonStop.TabIndex = 14;
@@ -352,22 +353,22 @@
             this.tabVideo.Controls.Add(this.textBox5);
             this.tabVideo.Controls.Add(this.textBox4);
             this.tabVideo.Controls.Add(this.textBox3);
-            this.tabVideo.Controls.Add(this.boxVideoLayer8);
-            this.tabVideo.Controls.Add(this.boxVideoLayer7);
-            this.tabVideo.Controls.Add(this.boxVideoLayer6);
-            this.tabVideo.Controls.Add(this.boxVideoLayer5);
-            this.tabVideo.Controls.Add(this.boxVideoLayer4);
-            this.tabVideo.Controls.Add(this.boxVideoLayer3);
-            this.tabVideo.Controls.Add(this.boxVideoLayer2);
-            this.tabVideo.Controls.Add(this.boxVideoLayer1);
-            this.tabVideo.Controls.Add(this.comboBoxVideo8);
-            this.tabVideo.Controls.Add(this.comboBoxVideo7);
-            this.tabVideo.Controls.Add(this.comboBoxVideo6);
-            this.tabVideo.Controls.Add(this.comboBoxVideo5);
-            this.tabVideo.Controls.Add(this.comboBoxVideo4);
-            this.tabVideo.Controls.Add(this.comboBoxVideo3);
-            this.tabVideo.Controls.Add(this.comboBoxVideo2);
-            this.tabVideo.Controls.Add(this.comboBoxVideo1);
+            this.tabVideo.Controls.Add(this.VL8);
+            this.tabVideo.Controls.Add(this.VL7);
+            this.tabVideo.Controls.Add(this.VL6);
+            this.tabVideo.Controls.Add(this.VL5);
+            this.tabVideo.Controls.Add(this.VL4);
+            this.tabVideo.Controls.Add(this.VL3);
+            this.tabVideo.Controls.Add(this.VL2);
+            this.tabVideo.Controls.Add(this.VL1);
+            this.tabVideo.Controls.Add(this.cbxV8);
+            this.tabVideo.Controls.Add(this.cbxV7);
+            this.tabVideo.Controls.Add(this.cbxV6);
+            this.tabVideo.Controls.Add(this.cbxV5);
+            this.tabVideo.Controls.Add(this.cbxV4);
+            this.tabVideo.Controls.Add(this.cbxV3);
+            this.tabVideo.Controls.Add(this.cbxV2);
+            this.tabVideo.Controls.Add(this.cbxV1);
             this.tabVideo.Controls.Add(this.cbV8);
             this.tabVideo.Controls.Add(this.cbV7);
             this.tabVideo.Controls.Add(this.cbV6);
@@ -464,141 +465,189 @@
             this.textBox3.Text = "1";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // boxVideoLayer8
+            // VL8
             // 
-            this.boxVideoLayer8.Enabled = false;
-            this.boxVideoLayer8.Location = new System.Drawing.Point(277, 242);
-            this.boxVideoLayer8.Name = "boxVideoLayer8";
-            this.boxVideoLayer8.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer8.TabIndex = 38;
+            this.VL8.Location = new System.Drawing.Point(277, 242);
+            this.VL8.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL8.Name = "VL8";
+            this.VL8.Size = new System.Drawing.Size(37, 20);
+            this.VL8.TabIndex = 38;
+            this.VL8.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer7
+            // VL7
             // 
-            this.boxVideoLayer7.Enabled = false;
-            this.boxVideoLayer7.Location = new System.Drawing.Point(277, 215);
-            this.boxVideoLayer7.Name = "boxVideoLayer7";
-            this.boxVideoLayer7.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer7.TabIndex = 37;
+            this.VL7.Location = new System.Drawing.Point(277, 215);
+            this.VL7.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL7.Name = "VL7";
+            this.VL7.Size = new System.Drawing.Size(37, 20);
+            this.VL7.TabIndex = 37;
+            this.VL7.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer6
+            // VL6
             // 
-            this.boxVideoLayer6.Enabled = false;
-            this.boxVideoLayer6.Location = new System.Drawing.Point(277, 188);
-            this.boxVideoLayer6.Name = "boxVideoLayer6";
-            this.boxVideoLayer6.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer6.TabIndex = 36;
+            this.VL6.Location = new System.Drawing.Point(277, 188);
+            this.VL6.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL6.Name = "VL6";
+            this.VL6.Size = new System.Drawing.Size(37, 20);
+            this.VL6.TabIndex = 36;
+            this.VL6.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer5
+            // VL5
             // 
-            this.boxVideoLayer5.Enabled = false;
-            this.boxVideoLayer5.Location = new System.Drawing.Point(277, 161);
-            this.boxVideoLayer5.Name = "boxVideoLayer5";
-            this.boxVideoLayer5.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer5.TabIndex = 35;
+            this.VL5.Location = new System.Drawing.Point(277, 161);
+            this.VL5.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL5.Name = "VL5";
+            this.VL5.Size = new System.Drawing.Size(37, 20);
+            this.VL5.TabIndex = 35;
+            this.VL5.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer4
+            // VL4
             // 
-            this.boxVideoLayer4.Enabled = false;
-            this.boxVideoLayer4.Location = new System.Drawing.Point(277, 134);
-            this.boxVideoLayer4.Name = "boxVideoLayer4";
-            this.boxVideoLayer4.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer4.TabIndex = 34;
+            this.VL4.Location = new System.Drawing.Point(277, 134);
+            this.VL4.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL4.Name = "VL4";
+            this.VL4.Size = new System.Drawing.Size(37, 20);
+            this.VL4.TabIndex = 34;
+            this.VL4.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer3
+            // VL3
             // 
-            this.boxVideoLayer3.Enabled = false;
-            this.boxVideoLayer3.Location = new System.Drawing.Point(277, 107);
-            this.boxVideoLayer3.Name = "boxVideoLayer3";
-            this.boxVideoLayer3.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer3.TabIndex = 33;
+            this.VL3.Location = new System.Drawing.Point(277, 107);
+            this.VL3.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL3.Name = "VL3";
+            this.VL3.Size = new System.Drawing.Size(37, 20);
+            this.VL3.TabIndex = 33;
+            this.VL3.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer2
+            // VL2
             // 
-            this.boxVideoLayer2.Enabled = false;
-            this.boxVideoLayer2.Location = new System.Drawing.Point(277, 80);
-            this.boxVideoLayer2.Name = "boxVideoLayer2";
-            this.boxVideoLayer2.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer2.TabIndex = 32;
+            this.VL2.Location = new System.Drawing.Point(277, 80);
+            this.VL2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL2.Name = "VL2";
+            this.VL2.Size = new System.Drawing.Size(37, 20);
+            this.VL2.TabIndex = 32;
+            this.VL2.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // boxVideoLayer1
+            // VL1
             // 
-            this.boxVideoLayer1.Enabled = false;
-            this.boxVideoLayer1.Location = new System.Drawing.Point(277, 53);
-            this.boxVideoLayer1.Name = "boxVideoLayer1";
-            this.boxVideoLayer1.Size = new System.Drawing.Size(37, 20);
-            this.boxVideoLayer1.TabIndex = 31;
+            this.VL1.Location = new System.Drawing.Point(277, 53);
+            this.VL1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.VL1.Name = "VL1";
+            this.VL1.Size = new System.Drawing.Size(37, 20);
+            this.VL1.TabIndex = 31;
+            this.VL1.ValueChanged += new System.EventHandler(this.NumericUpDown_CheckedChanged);
             // 
-            // comboBoxVideo8
+            // cbxV8
             // 
-            this.comboBoxVideo8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo8.FormattingEnabled = true;
-            this.comboBoxVideo8.Location = new System.Drawing.Point(141, 241);
-            this.comboBoxVideo8.Name = "comboBoxVideo8";
-            this.comboBoxVideo8.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo8.TabIndex = 18;
+            this.cbxV8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV8.FormattingEnabled = true;
+            this.cbxV8.Location = new System.Drawing.Point(141, 241);
+            this.cbxV8.Name = "cbxV8";
+            this.cbxV8.Size = new System.Drawing.Size(121, 21);
+            this.cbxV8.TabIndex = 18;
+            this.cbxV8.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo7
+            // cbxV7
             // 
-            this.comboBoxVideo7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo7.FormattingEnabled = true;
-            this.comboBoxVideo7.Location = new System.Drawing.Point(141, 214);
-            this.comboBoxVideo7.Name = "comboBoxVideo7";
-            this.comboBoxVideo7.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo7.TabIndex = 17;
+            this.cbxV7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV7.FormattingEnabled = true;
+            this.cbxV7.Location = new System.Drawing.Point(141, 214);
+            this.cbxV7.Name = "cbxV7";
+            this.cbxV7.Size = new System.Drawing.Size(121, 21);
+            this.cbxV7.TabIndex = 17;
+            this.cbxV7.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo6
+            // cbxV6
             // 
-            this.comboBoxVideo6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo6.FormattingEnabled = true;
-            this.comboBoxVideo6.Location = new System.Drawing.Point(141, 187);
-            this.comboBoxVideo6.Name = "comboBoxVideo6";
-            this.comboBoxVideo6.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo6.TabIndex = 16;
+            this.cbxV6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV6.FormattingEnabled = true;
+            this.cbxV6.Location = new System.Drawing.Point(141, 187);
+            this.cbxV6.Name = "cbxV6";
+            this.cbxV6.Size = new System.Drawing.Size(121, 21);
+            this.cbxV6.TabIndex = 16;
+            this.cbxV6.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo5
+            // cbxV5
             // 
-            this.comboBoxVideo5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo5.FormattingEnabled = true;
-            this.comboBoxVideo5.Location = new System.Drawing.Point(141, 160);
-            this.comboBoxVideo5.Name = "comboBoxVideo5";
-            this.comboBoxVideo5.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo5.TabIndex = 15;
+            this.cbxV5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV5.FormattingEnabled = true;
+            this.cbxV5.Location = new System.Drawing.Point(141, 160);
+            this.cbxV5.Name = "cbxV5";
+            this.cbxV5.Size = new System.Drawing.Size(121, 21);
+            this.cbxV5.TabIndex = 15;
+            this.cbxV5.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo4
+            // cbxV4
             // 
-            this.comboBoxVideo4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo4.FormattingEnabled = true;
-            this.comboBoxVideo4.Location = new System.Drawing.Point(141, 133);
-            this.comboBoxVideo4.Name = "comboBoxVideo4";
-            this.comboBoxVideo4.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo4.TabIndex = 14;
+            this.cbxV4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV4.FormattingEnabled = true;
+            this.cbxV4.Location = new System.Drawing.Point(141, 133);
+            this.cbxV4.Name = "cbxV4";
+            this.cbxV4.Size = new System.Drawing.Size(121, 21);
+            this.cbxV4.TabIndex = 14;
+            this.cbxV4.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo3
+            // cbxV3
             // 
-            this.comboBoxVideo3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo3.FormattingEnabled = true;
-            this.comboBoxVideo3.Location = new System.Drawing.Point(141, 106);
-            this.comboBoxVideo3.Name = "comboBoxVideo3";
-            this.comboBoxVideo3.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo3.TabIndex = 13;
+            this.cbxV3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV3.FormattingEnabled = true;
+            this.cbxV3.Location = new System.Drawing.Point(141, 106);
+            this.cbxV3.Name = "cbxV3";
+            this.cbxV3.Size = new System.Drawing.Size(121, 21);
+            this.cbxV3.TabIndex = 13;
+            this.cbxV3.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo2
+            // cbxV2
             // 
-            this.comboBoxVideo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo2.FormattingEnabled = true;
-            this.comboBoxVideo2.Location = new System.Drawing.Point(141, 79);
-            this.comboBoxVideo2.Name = "comboBoxVideo2";
-            this.comboBoxVideo2.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo2.TabIndex = 12;
+            this.cbxV2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV2.FormattingEnabled = true;
+            this.cbxV2.Location = new System.Drawing.Point(141, 79);
+            this.cbxV2.Name = "cbxV2";
+            this.cbxV2.Size = new System.Drawing.Size(121, 21);
+            this.cbxV2.TabIndex = 12;
+            this.cbxV2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
-            // comboBoxVideo1
+            // cbxV1
             // 
-            this.comboBoxVideo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxVideo1.FormattingEnabled = true;
-            this.comboBoxVideo1.Location = new System.Drawing.Point(141, 52);
-            this.comboBoxVideo1.Name = "comboBoxVideo1";
-            this.comboBoxVideo1.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxVideo1.TabIndex = 11;
+            this.cbxV1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxV1.FormattingEnabled = true;
+            this.cbxV1.Location = new System.Drawing.Point(141, 52);
+            this.cbxV1.Name = "cbxV1";
+            this.cbxV1.Size = new System.Drawing.Size(121, 21);
+            this.cbxV1.TabIndex = 11;
+            this.cbxV1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxesVideo_SelectedIndexChanged);
             // 
             // cbV8
             // 
@@ -1471,12 +1520,23 @@
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "made by Kacper Cieślewicz 2018";
             // 
+            // buttonPause
+            // 
+            this.buttonPause.Location = new System.Drawing.Point(145, 366);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(96, 38);
+            this.buttonPause.TabIndex = 17;
+            this.buttonPause.Text = "Pause";
+            this.buttonPause.UseVisualStyleBackColor = true;
+            this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(388, 427);
+            this.Controls.Add(this.buttonPause);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(labelLogo);
@@ -1495,14 +1555,14 @@
             this.TabControl.ResumeLayout(false);
             this.tabVideo.ResumeLayout(false);
             this.tabVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxVideoLayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VL1)).EndInit();
             this.tabBar.ResumeLayout(false);
             this.tabBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boxBarHorizontalPos)).EndInit();
@@ -1543,22 +1603,22 @@
         private System.Windows.Forms.TabPage tabVideo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer8;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer7;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer6;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer5;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer4;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer3;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer2;
-        private System.Windows.Forms.NumericUpDown boxVideoLayer1;
-        private System.Windows.Forms.ComboBox comboBoxVideo8;
-        private System.Windows.Forms.ComboBox comboBoxVideo7;
-        private System.Windows.Forms.ComboBox comboBoxVideo6;
-        private System.Windows.Forms.ComboBox comboBoxVideo5;
-        private System.Windows.Forms.ComboBox comboBoxVideo4;
-        private System.Windows.Forms.ComboBox comboBoxVideo3;
-        private System.Windows.Forms.ComboBox comboBoxVideo2;
-        private System.Windows.Forms.ComboBox comboBoxVideo1;
+        private System.Windows.Forms.NumericUpDown VL8;
+        private System.Windows.Forms.NumericUpDown VL7;
+        private System.Windows.Forms.NumericUpDown VL6;
+        private System.Windows.Forms.NumericUpDown VL5;
+        private System.Windows.Forms.NumericUpDown VL4;
+        private System.Windows.Forms.NumericUpDown VL3;
+        private System.Windows.Forms.NumericUpDown VL2;
+        private System.Windows.Forms.NumericUpDown VL1;
+        private System.Windows.Forms.ComboBox cbxV8;
+        private System.Windows.Forms.ComboBox cbxV7;
+        private System.Windows.Forms.ComboBox cbxV6;
+        private System.Windows.Forms.ComboBox cbxV5;
+        private System.Windows.Forms.ComboBox cbxV4;
+        private System.Windows.Forms.ComboBox cbxV3;
+        private System.Windows.Forms.ComboBox cbxV2;
+        private System.Windows.Forms.ComboBox cbxV1;
         private System.Windows.Forms.CheckBox cbV8;
         private System.Windows.Forms.CheckBox cbV7;
         private System.Windows.Forms.CheckBox cbV6;
@@ -1623,6 +1683,7 @@
         private System.Windows.Forms.CheckBox cbL3;
         private System.Windows.Forms.CheckBox cbL2;
         private System.Windows.Forms.CheckBox cbL1;
+        private System.Windows.Forms.Button buttonPause;
     }
 }
 

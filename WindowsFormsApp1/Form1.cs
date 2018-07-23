@@ -15,34 +15,35 @@ namespace WindowsFormsApp1
         private readonly int port = 5250;
         private List<string> textList = new List<string>();
         private List<string> videoTitles;
-
-        #region Channels
-
-        private Channel ch1 = new Channel();
-        private Channel ch2 = new Channel();
-        private Channel ch3 = new Channel();
-        private Channel ch4 = new Channel();
-        private Channel ch5 = new Channel();
-        private Channel ch6 = new Channel();
-        private Channel ch7 = new Channel();
-        private Channel ch8 = new Channel();
-
-        #endregion Channels
+        private List<Channel> channels = new List<Channel>();
 
         #endregion variables
 
         #region MainWindow
 
-        public Form1()
+        #region Form
+
+            public Form1()
         {
             InitializeComponent();
             ButtonsReset();
+            AddChannels();
             TabControl.Enabled = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+            private void Form1_Load(object sender, EventArgs e)
         {
         }
+
+            private void AddChannels()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                channels.Add(new Channel());
+            }
+        }
+            
+        #endregion
 
         #region Buttons
 
@@ -59,14 +60,49 @@ namespace WindowsFormsApp1
         private void buttonStart_Click(object sender, EventArgs e)
         {
             buttonStart.Enabled = false;
+            buttonPause.Enabled = true;
             buttonStop.Enabled = true;
-            //caspar_.SetBackgroundColor(backgroundColorHex);
+            int i = 0;
+            foreach (Channel ch in channels)
+            {
+                i++;
+                if (ch.Loaded)
+                {
+                    client.PlayVideo(i , ch.VideoLayer );
+                }
+            }
+        }
+
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            buttonStop.Enabled = true;
+            buttonPause.Enabled = false;
+            buttonStart.Enabled = true;
+            int i = 0;
+            foreach (Channel ch in channels)
+            {
+                i++;
+                if (ch.Loaded)
+                {
+                    client.PauseVideo(i, ch.VideoLayer);
+                }
+            }
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
             buttonStop.Enabled = false;
+            buttonPause.Enabled = false;
             buttonStart.Enabled = true;
+            int i = 0;
+            foreach (Channel ch in channels)
+            {
+                i++;
+                if (ch.Loaded)
+                {
+                    client.StopVideo(i, ch.VideoLayer);
+                }
+            }
         }
 
         #endregion Buttons
@@ -91,14 +127,14 @@ namespace WindowsFormsApp1
             this.videoTitles = this.client.GetFilesInfo();
             foreach (string s in this.videoTitles)
             {
-                comboBoxVideo1.Items.Add(s);
-                comboBoxVideo2.Items.Add(s);
-                comboBoxVideo3.Items.Add(s);
-                comboBoxVideo4.Items.Add(s);
-                comboBoxVideo5.Items.Add(s);
-                comboBoxVideo6.Items.Add(s);
-                comboBoxVideo7.Items.Add(s);
-                comboBoxVideo8.Items.Add(s);
+                cbxV1.Items.Add(s);
+                cbxV2.Items.Add(s);
+                cbxV3.Items.Add(s);
+                cbxV4.Items.Add(s);
+                cbxV5.Items.Add(s);
+                cbxV6.Items.Add(s);
+                cbxV7.Items.Add(s);
+                cbxV8.Items.Add(s);
             }
         }
 
@@ -140,25 +176,23 @@ namespace WindowsFormsApp1
 
         #endregion Labels
 
-        #region CheckBoxes
-
         private void CheckBoxes_CheckedChanged(object sender, EventArgs e)
         {
-            System.Windows.Forms.CheckBox cb = (System.Windows.Forms.CheckBox)sender;
             if (typeof(System.Windows.Forms.CheckBox) == sender.GetType())
             {
+                System.Windows.Forms.CheckBox cb = (System.Windows.Forms.CheckBox)sender;
                 for (int i = 1; i < 9; i++)
                 {
                     if (cb.Name == "cbV" + i)
                     {
-                        var result = this.GetType().GetField("ch" + i);
-                        if (result == "")
+                        if (channels[i-1].VideoName == "")
                         {
                             cb.Checked = false;
                         }
                         else
                         {
-                            client.LoadVideo(i, result);
+                            client.LoadVideo(i, channels[i-1].VideoLayer, channels[i-1].VideoName);
+                            channels[i - 1].Loaded = true;
                         }
                     }
                     else if (cb.Name == "cbB" + i)
@@ -179,7 +213,35 @@ namespace WindowsFormsApp1
             }
         }
 
-        #endregion
+        private void ComboBoxesVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (typeof(System.Windows.Forms.ComboBox) == sender.GetType())
+            {
+                System.Windows.Forms.ComboBox cbx = (System.Windows.Forms.ComboBox)sender;
+                for (int i = 1; i < 9; i++)
+                {
+                    if (cbx.Name == "cbxV" + i)
+                    {
+                        channels[i-1].VideoName=cbx.SelectedItem.ToString();
+                    }
+                }
+            }
+        }
+
+        private void NumericUpDown_CheckedChanged(object sender, EventArgs e)
+        {
+            if (typeof(System.Windows.Forms.NumericUpDown) == sender.GetType())
+            {
+                System.Windows.Forms.NumericUpDown nud = (System.Windows.Forms.NumericUpDown)sender;
+                for (int i = 1; i < 9; i++)
+                {
+                    if (nud.Name == "VL" + i)
+                    {
+                        channels[i - 1].VideoLayer = Decimal.ToInt32(nud.Value);
+                    }
+                }
+            }
+        }
 
         #endregion Tabs
 
@@ -242,6 +304,7 @@ namespace WindowsFormsApp1
             buttonReset.Enabled = false;
             buttonFile.Enabled = false;
             buttonStart.Enabled = false;
+            buttonPause.Enabled = false;
             buttonStop.Enabled = false;
         }
 
