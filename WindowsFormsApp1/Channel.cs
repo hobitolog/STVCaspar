@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         private bool infoBar = false;
         private bool clock = false;
         private bool labels = false;
+        private bool logo = false;
         private int videoLayer = 0;
         private bool loaded = false;
 
@@ -50,5 +51,12 @@ namespace WindowsFormsApp1
             get => labels;
             set => labels = value;
         }
+
+        public bool Logo
+        {
+            get => logo;
+            set => logo = value;
+        }
+
     }
 }
