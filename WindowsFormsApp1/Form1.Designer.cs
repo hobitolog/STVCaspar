@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label labelBar;
             System.Windows.Forms.Label labelLogo;
             this.boxAdress = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
-            this.buttonFile = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.tabVideo = new System.Windows.Forms.TabPage();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -65,6 +62,10 @@
             this.cbV1 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabBar = new System.Windows.Forms.TabPage();
+            this.nameTextchars = new System.Windows.Forms.TextBox();
+            this.infoTextchars = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.infoTextBox = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -117,11 +118,6 @@
             this.cbL1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonPause = new System.Windows.Forms.Button();
-            this.infoTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.infoTextchars = new System.Windows.Forms.TextBox();
-            this.nameTextchars = new System.Windows.Forms.TextBox();
-            labelBar = new System.Windows.Forms.Label();
             labelLogo = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.tabVideo.SuspendLayout();
@@ -129,17 +125,6 @@
             this.tabClock.SuspendLayout();
             this.tabLabels.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelBar
-            // 
-            labelBar.AutoSize = true;
-            labelBar.CausesValidation = false;
-            labelBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            labelBar.Location = new System.Drawing.Point(61, 60);
-            labelBar.Name = "labelBar";
-            labelBar.Size = new System.Drawing.Size(105, 15);
-            labelBar.TabIndex = 11;
-            labelBar.Text = "Information bar";
             // 
             // labelLogo
             // 
@@ -199,21 +184,6 @@
             this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
-            // 
-            // buttonFile
-            // 
-            this.buttonFile.Location = new System.Drawing.Point(219, 57);
-            this.buttonFile.Name = "buttonFile";
-            this.buttonFile.Size = new System.Drawing.Size(47, 23);
-            this.buttonFile.TabIndex = 19;
-            this.buttonFile.Text = "File";
-            this.buttonFile.UseVisualStyleBackColor = true;
-            this.buttonFile.Click += new System.EventHandler(this.buttonFile_Click);
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            this.openFileDialog.Filter = "Text files (*.txt)|*.txt";
             // 
             // TabControl
             // 
@@ -536,14 +506,52 @@
             this.tabBar.Controls.Add(this.cbB3);
             this.tabBar.Controls.Add(this.cbB2);
             this.tabBar.Controls.Add(this.cbB1);
-            this.tabBar.Controls.Add(labelBar);
-            this.tabBar.Controls.Add(this.buttonFile);
             this.tabBar.Location = new System.Drawing.Point(4, 22);
             this.tabBar.Name = "tabBar";
             this.tabBar.Padding = new System.Windows.Forms.Padding(3);
             this.tabBar.Size = new System.Drawing.Size(356, 294);
             this.tabBar.TabIndex = 0;
             this.tabBar.Text = "InfoBar";
+            // 
+            // nameTextchars
+            // 
+            this.nameTextchars.Location = new System.Drawing.Point(286, 122);
+            this.nameTextchars.Name = "nameTextchars";
+            this.nameTextchars.ReadOnly = true;
+            this.nameTextchars.Size = new System.Drawing.Size(30, 20);
+            this.nameTextchars.TabIndex = 46;
+            this.nameTextchars.Text = "34";
+            this.nameTextchars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // infoTextchars
+            // 
+            this.infoTextchars.Location = new System.Drawing.Point(286, 96);
+            this.infoTextchars.Name = "infoTextchars";
+            this.infoTextchars.ReadOnly = true;
+            this.infoTextchars.Size = new System.Drawing.Size(30, 20);
+            this.infoTextchars.TabIndex = 45;
+            this.infoTextchars.Text = "34";
+            this.infoTextchars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(32, 122);
+            this.nameTextBox.MaxLength = 34;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(248, 20);
+            this.nameTextBox.TabIndex = 44;
+            this.nameTextBox.UseWaitCursor = true;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
+            // 
+            // infoTextBox
+            // 
+            this.infoTextBox.Location = new System.Drawing.Point(32, 96);
+            this.infoTextBox.MaxLength = 34;
+            this.infoTextBox.Name = "infoTextBox";
+            this.infoTextBox.Size = new System.Drawing.Size(248, 20);
+            this.infoTextBox.TabIndex = 43;
+            this.infoTextBox.UseWaitCursor = true;
+            this.infoTextBox.TextChanged += new System.EventHandler(this.infoTextBox_TextChanged);
             // 
             // textBox18
             // 
@@ -1170,46 +1178,6 @@
             this.buttonPause.UseVisualStyleBackColor = true;
             this.buttonPause.Click += new System.EventHandler(this.buttonPause_Click);
             // 
-            // infoTextBox
-            // 
-            this.infoTextBox.Location = new System.Drawing.Point(32, 96);
-            this.infoTextBox.MaxLength = 34;
-            this.infoTextBox.Name = "infoTextBox";
-            this.infoTextBox.Size = new System.Drawing.Size(248, 20);
-            this.infoTextBox.TabIndex = 43;
-            this.infoTextBox.UseWaitCursor = true;
-            this.infoTextBox.TextChanged += new System.EventHandler(this.infoTextBox_TextChanged);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(32, 122);
-            this.nameTextBox.MaxLength = 34;
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(248, 20);
-            this.nameTextBox.TabIndex = 44;
-            this.nameTextBox.UseWaitCursor = true;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
-            // 
-            // infoTextchars
-            // 
-            this.infoTextchars.Location = new System.Drawing.Point(286, 96);
-            this.infoTextchars.Name = "infoTextchars";
-            this.infoTextchars.ReadOnly = true;
-            this.infoTextchars.Size = new System.Drawing.Size(30, 20);
-            this.infoTextchars.TabIndex = 45;
-            this.infoTextchars.Text = "34";
-            this.infoTextchars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // nameTextchars
-            // 
-            this.nameTextchars.Location = new System.Drawing.Point(286, 122);
-            this.nameTextchars.Name = "nameTextchars";
-            this.nameTextchars.ReadOnly = true;
-            this.nameTextchars.Size = new System.Drawing.Size(30, 20);
-            this.nameTextchars.TabIndex = 46;
-            this.nameTextchars.Text = "34";
-            this.nameTextchars.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,8 +1221,6 @@
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonStop;
-        private System.Windows.Forms.Button buttonFile;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage tabBar;
         private System.Windows.Forms.TabPage tabClock;

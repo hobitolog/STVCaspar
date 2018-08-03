@@ -153,15 +153,6 @@ namespace WindowsFormsApp1
 
         #region InfoBar
 
-        #region Buttons
-
-        private void buttonFile_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog.ShowDialog() == DialogResult.OK) ReadFile(openFileDialog.FileName);
-        }
-
-        #endregion Buttons
-
         #region TextBox
 
         private void infoTextBox_TextChanged(object sender, EventArgs e)
@@ -239,6 +230,7 @@ namespace WindowsFormsApp1
                         {
                             client.ClearInfoBar(i);
                             channels[i - 1].InfoBar = false;
+                            OnConnectUpdateGUI();
                         }
                     }
                     else if (cb.Name == "cbC" + i)
@@ -325,7 +317,6 @@ namespace WindowsFormsApp1
             TextBoxColorChange(Color.LimeGreen);
             buttonConnect.Enabled = false;
             buttonStart.Enabled = true;
-            buttonFile.Enabled = true;
             buttonReset.Enabled = true;
             TabControl.Enabled = true;
             LoadVideoNames();
@@ -348,7 +339,6 @@ namespace WindowsFormsApp1
         {
             buttonConnect.Enabled = true;
             buttonReset.Enabled = false;
-            buttonFile.Enabled = false;
             buttonStart.Enabled = false;
             buttonPause.Enabled = false;
             buttonStop.Enabled = false;
