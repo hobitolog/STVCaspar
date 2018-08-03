@@ -32,7 +32,7 @@ Po zakończonej pracy wystarczy zamknąć program, lub wcisnąć przycisk discon
 
 ## Autor
 
-* **Kacper Cieślewicz** - [Kacper Cieślewicz](https://github.com/KacperCieslewicz)
+* Kacper Cieślewicz - [Kacper Cieślewicz](https://github.com/KacperCieslewicz)
 
 ## Podziękowania
 
