@@ -7,7 +7,7 @@ SpacjaTV CasparCG project.
 ## Serwer CasparCG
 
 Do działania aplikacji klienckiej potrzebujemy zainstalowanej aplikacji serwerowej na komputerze docelowym o wydajnej karcie graficznej.
-Klient obsługuje do 8 kanałów. Ich ilość i rodzaj określamy przez edycję pliku serwera casparcg.config. 
+Klient obsługuje do 8 kanałów. Ich ilość i rodzaj określamy przez edycję pliku serwera casparcg.config. W celu użycia template należy skopiować zawartość folderu Server templates z repozytorium do folderu templates w katalogu serwera.
 
 ## Uruchamianie
 
