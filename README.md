@@ -18,6 +18,7 @@ Pierwsza liczba to rozdzielczość, druga to ilość klatek na sekundę. Najbard
 * 720p - 720p2398|720p2400|720p2500|720p5000|720p2997|720p5994|720p3000|720p6000
 * PAL
 * NTSC
+
 Aby dodać kanał z interesującą nas rozdzielczością wystarczy wewnątrz pola <channels> dodać ten kod:
 ```
 <channel>
