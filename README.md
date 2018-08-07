@@ -28,7 +28,7 @@ Po zakończonej pracy wystarczy zamknąć program, lub wcisnąć przycisk discon
 ## Napisane przy pomocy
 
 * Visual Studio 2017 - kod programu
-* Animate CC 2018 Trial - template flash
+* Animate CC 2018 Trial + [Template Generator](https://sourceforge.net/projects/casparcg/files/CasparCG_Template_Generator/) - template flash
 
 * Jeśli chcesz stworzyć własny template flash polecam ten poradnik, sam z niego korzystałem:
 [![poradnik](https://img.youtube.com/vi/mn4IfcDkIhU/0.jpg)](https://www.youtube.com/watch?v=mn4IfcDkIhU)
